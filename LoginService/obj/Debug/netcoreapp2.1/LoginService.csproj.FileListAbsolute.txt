@@ -12,3 +12,4 @@
 /Users/jeremywells/workspace/dot-net-core-api-gateway/ApiGateway/LoginService/obj/Debug/netcoreapp2.1/LoginService.RazorTargetAssemblyInfo.cache
 /Users/jeremywells/workspace/dot-net-core-api-gateway/ApiGateway/LoginService/obj/Debug/netcoreapp2.1/LoginService.dll
 /Users/jeremywells/workspace/dot-net-core-api-gateway/ApiGateway/LoginService/obj/Debug/netcoreapp2.1/LoginService.pdb
+/Users/jeremywells/workspace/dot-net-core-api-gateway/ApiGateway/LoginService/obj/Debug/netcoreapp2.1/UserSecretsAssemblyInfo.cs
