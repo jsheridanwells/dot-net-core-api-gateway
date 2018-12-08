@@ -31,5 +31,20 @@ namespace LoginService.Controllers
             
             return Ok(token);
         }
+
+        [HttpGet]
+        public IActionResult Validate(string token, string username)
+        {
+            bool exists = new UserRepository().GetUser(username) != null;
+            if (!exists)
+                return NotFound();
+
+            string tokenUsername = TokenManager.ValidateToken(token);
+
+            if (username.Equals(tokenUsername))
+                return Ok();
+            
+            return BadRequest();
+        }
     }
 }

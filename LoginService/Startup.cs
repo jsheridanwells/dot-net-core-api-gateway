@@ -16,6 +16,7 @@ namespace LoginService
 {
     public class Startup
     {
+        private string _secret;
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -26,7 +27,7 @@ namespace LoginService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<TokenSecret>(Configuration.GetSection("TokenSecret"));
+            _secret = Configuration["dot-net-core-api-gateway-secret"];
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -34,7 +35,7 @@ namespace LoginService
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
-            {
+            {                
                 app.UseDeveloperExceptionPage();
             }
             else
