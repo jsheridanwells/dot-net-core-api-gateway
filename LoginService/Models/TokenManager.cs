@@ -8,11 +8,6 @@ namespace LoginService.Models
 {
     public class TokenManager
     {
-        // private readonly string _secret;
-        // public TokenManager(IOptions<TokenSecret> secret)
-        // {
-        //     _secret = secret.Value.Secret;
-        // }
         private static string _secret = "SmYH2i3naXS6ihUyBqCI5Gl0p75adTr1S0GVpx+yoVdPa90av6UsWEGR5oBmwxpePfIu11ZazjyW680eFYy3zA==";
         
         public static string GenerateToken(string name)

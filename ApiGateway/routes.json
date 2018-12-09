@@ -1,0 +1,28 @@
+{
+    "routes": [
+        {
+            "endpoint": "/movies",
+            "destination": {
+                "uri": "http://localhost:8090/movies/",
+                "requiresAuthentication": "true"
+            }
+        },
+        {
+            "endpoint": "/music",
+            "destination": {
+                "uri": "http://localhost:8091/music/",
+                "requiresAuthentication": "true"
+            }
+        },
+        {
+            "endpoint": "/television",
+            "destination": {
+                "uri": "http://localhost:8090/television/",
+                "requiresAuthentication": "true"
+            }
+        }
+    ],
+    "authenticationService": {
+        "uri": "http://localhost:5000/api/login/"
+    }
+}
